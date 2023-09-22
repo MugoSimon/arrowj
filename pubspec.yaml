@@ -1,0 +1,58 @@
+name: arrowj
+description: A new Flutter project.
+
+##################################################################################
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+##################################################################################
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+
+##################################################################################
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  cupertino_icons: ^1.0.2
+  google_fonts: ^5.1.0
+  flutter_native_splash: ^2.3.2
+  get: ^4.6.6
+  liquid_swipe: ^3.1.0
+  smooth_page_indicator: ^1.1.0
+
+# flutter_native_splash-development.yaml
+flutter_native_splash:
+  color: "#f7f6f1"
+  image: assets/images/bag_10.png
+  color_dark: "#272727"
+  image_dark: assets/images/larry_bubble.png
+  #branding: assets/branding-development.png
+  #branding_dark: assets/branding-development.png
+
+  android_12:
+    image: assets/images/bag_10.png
+    icon_background_color: "#f7f6f1"
+    image_dark: assets/images/bag_10.png
+    icon_background_color_dark: "#272727"
+
+    web: false
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/images/splash_images/
+    - assets/images/on_boarding_images/
