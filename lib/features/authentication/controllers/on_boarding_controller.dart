@@ -6,7 +6,6 @@ import 'package:liquid_swipe/PageHelpers/LiquidController.dart';
 import '../../../constants/colors.dart';
 import '../../../constants/text_strings.dart';
 import '../screens/on_boarding_screen/on_boarding_page_widget.dart';
-
 class OnBoardingController extends GetxController {
   final controller = LiquidController();
   RxInt currentPage = 0.obs;
@@ -50,17 +49,26 @@ class OnBoardingController extends GetxController {
     )
   ];
 
-  onPageChangedCallback(int activePageIndex) => currentPage.value = activePageIndex;
-  skip() => controller.jumpToPage(page: 3);
-  animatedToNextSlide(){
+
+  onPageChangedCallback(int activePageIndex) =>
+      currentPage.value = activePageIndex;
+
+  skip() => Get.offNamed('/welcome');
+
+  animatedToNextSlide() {
     int nextPage = controller.currentPage + 1;
-    controller.animateToPage(page: nextPage);
+    if (nextPage < pages.length) {
+      controller.animateToPage(page: nextPage);
+    } else {
+      skip();
+    }
   }
 
-  // Add this method to navigate to the welcome screen when the last onboarding page is reached.
   void navigateToWelcomeScreen() {
     if (currentPage.value == pages.length - 1) {
-      Get.offNamed('/welcome');
+      Future.delayed(const Duration(milliseconds: 300), () {
+        skip();
+      });
     }
   }
 }
