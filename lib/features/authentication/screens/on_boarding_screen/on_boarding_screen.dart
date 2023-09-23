@@ -5,21 +5,16 @@ import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../controllers/splash_screen_controller.dart';
+
 class OnBoardingScreen extends StatelessWidget {
   OnBoardingScreen({Key? key}) : super(key: key);
 
-  final splashScreenController = Get.put(SplashScreenController());
+  final obController = OnBoardingController();
+  final splashScreenController = SplashScreenController(); // Initialize the SplashScreenController
 
   @override
   Widget build(BuildContext context) {
-    final obController = OnBoardingController();
-
-    splashScreenController.startAnimation();
-
-    // Remove the delay and navigation here
-    // Future.delayed(Duration(seconds: 2), () {
-    //   Get.toNamed('/onboarding');
-    // });
+    splashScreenController.startAnimation(); // Call the startAnimation() method
 
     return Scaffold(
       body: Stack(

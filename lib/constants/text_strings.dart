@@ -10,10 +10,10 @@ const String tOnBoardingTitle2 = "Access wherever you are ";
 const String tOnBoardingTitle3 = "Integration with Power Apps";
 const String tOnBoardingTitle4 = "Code. Rest. Enjoy";
 //SubTitle
-const String tOnBoardingSubTitle1 = "./Appable/";
-const String tOnBoardingSubTitle2 = "./Appable/";
-const String tOnBoardingSubTitle3 = "./Appable/";
-const String tOnBoardingSubTitle4 = "./Appable/";
+const String tOnBoardingSubTitle1 = ".Monday";
+const String tOnBoardingSubTitle2 = ".Tuesday";
+const String tOnBoardingSubTitle3 = ".Wednesday";
+const String tOnBoardingSubTitle4 = ".Friday";
 //Counter
 const String tOnBoardingCounter1 = "1/4";
 const String tOnBoardingCounter2 = "2/4";
