@@ -4,24 +4,35 @@ import 'package:get/get.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../../controllers/splash_screen_controller.dart';
+
 class OnBoardingScreen extends StatelessWidget {
   OnBoardingScreen({Key? key}) : super(key: key);
+
+  final splashScreenController = Get.put(SplashScreenController());
+
 
   @override
   Widget build(BuildContext context) {
     final obController = OnBoardingController();
 
+    splashScreenController.startAnimation();
+
+    // Delay for 2 seconds and then navigate to the onboarding screen.
+    Future.delayed(Duration(seconds: 2), () {
+      Get.toNamed('/onboarding');
+    });
     return Scaffold(
       body: Stack(
         alignment: Alignment.center,
         children: [
           LiquidSwipe(
-            pages: obController.pages,
-            liquidController: obController.controller,
-            onPageChangeCallback: obController.onPageChangedCallback,
-            slideIconWidget: Icon(Icons.arrow_back_ios),
-            enableSideReveal: true,
-          ),
+          pages: obController.pages,
+          liquidController: obController.controller,
+          onPageChangeCallback: (pageIndex) {
+            obController.onPageChangedCallback(pageIndex);
+            obController.navigateToWelcomeScreen(); // Call this method on page change.
+          }),
           Positioned(
               bottom: 40.0,
               child: OutlinedButton(
