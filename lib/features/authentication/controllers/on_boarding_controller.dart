@@ -56,4 +56,11 @@ class OnBoardingController extends GetxController {
     int nextPage = controller.currentPage + 1;
     controller.animateToPage(page: nextPage);
   }
+
+  // Add this method to navigate to the welcome screen when the last onboarding page is reached.
+  void navigateToWelcomeScreen() {
+    if (currentPage.value == pages.length - 1) {
+      Get.offNamed('/welcome');
+    }
+  }
 }
