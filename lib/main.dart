@@ -17,7 +17,7 @@ class App extends StatelessWidget {
     return GetMaterialApp(
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.system,
       initialRoute: '/',
       getPages: [
         GetPage(name: '/', page: () => SplashScreen()),

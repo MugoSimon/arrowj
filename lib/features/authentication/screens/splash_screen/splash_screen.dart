@@ -11,7 +11,6 @@ import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 class SplashScreen extends StatelessWidget {
   SplashScreen({Key? key}) : super(key: key);
 
-  //SplashScreenController splashScreenController = SplashScreenController();
   final splashScreenController = Get.put(SplashScreenController());
 
   @override

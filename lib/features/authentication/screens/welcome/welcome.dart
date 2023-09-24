@@ -13,7 +13,7 @@ class WelcomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Welcome to My App!',
+              'Arrowj',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
