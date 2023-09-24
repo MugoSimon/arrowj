@@ -15,7 +15,7 @@ class OnBoardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     splashScreenController.startAnimation(); // Call the startAnimation() method
-
+//well Sunday
     return Scaffold(
       body: Stack(
         alignment: Alignment.center,
