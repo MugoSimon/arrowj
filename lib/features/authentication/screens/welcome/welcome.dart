@@ -1,31 +1,31 @@
+import 'package:arrowj/constants/image_strings.dart';
+import 'package:arrowj/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Welcome'),
-        automaticallyImplyLeading: false,
-      ),
-      body: const Center(
+      body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Text(
-              'Arrowj',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 20),
-            Text(
-              'Enjoy using our awesome app.',
-              style: TextStyle(
-                fontSize: 18,
-              ),
-            ),
+            Image(image: AssetImage(tWelcomeScreenImage)),
+            Text(tWelcomeTitle),
+            Text(tWelcomeSubTitle),
+            Row(
+              children: [
+                OutlinedButton(
+                  onPressed: () {},
+                  child: Text(tLogin,
+                      style: Theme.of(context).textTheme.bodyLarge),
+                ),
+                ElevatedButton(
+                    onPressed: () {},
+                    child: Text(tSignUp,
+                        style: Theme.of(context).textTheme.bodyLarge))
+              ],
+            )
           ],
         ),
       ),

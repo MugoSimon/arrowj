@@ -54,4 +54,5 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+    - assets/images/welcome_images/
     - assets/on_boarding_images/
