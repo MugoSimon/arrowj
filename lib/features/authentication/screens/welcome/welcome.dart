@@ -1,31 +1,62 @@
+import 'package:arrowj/constants/colors.dart';
+import 'package:arrowj/constants/image_strings.dart';
+import 'package:arrowj/constants/sizes.dart';
+import 'package:arrowj/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var mediaQuery = MediaQuery.of(context);
+    var height = mediaQuery.size.height;
+    var brightness = mediaQuery.platformBrightness;
+    final isDark = brightness == Brightness.dark;
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Welcome'),
-        automaticallyImplyLeading: false,
-      ),
-      body: const Center(
+      backgroundColor: isDark? tSecondaryColor :  tPrimaryColor,
+      body: Container(
+        padding: EdgeInsets.all(tDefaultSize),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Text(
-              'Arrowj',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
+            Image(
+              image: AssetImage(tWelcomeScreenImage),
+              height: height * 0.6,
             ),
-            SizedBox(height: 20),
-            Text(
-              'Enjoy using our awesome app.',
-              style: TextStyle(
-                fontSize: 18,
-              ),
+            Column(
+              children: [
+                Text(tWelcomeTitle,
+                    style: Theme.of(context).textTheme.headline3),
+                Text(
+                  tWelcomeSubTitle,
+                  style: Theme.of(context).textTheme.headline2,
+                  textAlign: TextAlign.center,
+                ),
+              ],
             ),
+            Row(
+              children: [
+                Expanded(
+                  child: OutlinedButton(
+                    onPressed: () {},
+
+                    child: Text(tLogin.toUpperCase(),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 10.0,
+                ),
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {},
+
+                    child: Text(
+                      tSignUp.toUpperCase(),
+                    ),
+                  ),
+                )
+              ],
+            )
           ],
         ),
       ),

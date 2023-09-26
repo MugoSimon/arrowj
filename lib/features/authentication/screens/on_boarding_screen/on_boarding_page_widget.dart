@@ -26,14 +26,20 @@ class OnBoardingPageWidget extends StatelessWidget {
           ),
           Column(
             children: [
-              Text(model.title, style: Theme.of(context).textTheme.headline2),
+              Text(
+                  model.title,
+                  style: Theme.of(context).textTheme.headlineSmall),
               Text(
                 model.subtitle,
                 textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.subtitle2
               ),
             ],
           ),
-          Text(model.counterText),
+          Text(
+              model.counterText,
+              style: Theme.of(context).textTheme.displaySmall
+          ),
           SizedBox(height: 60.0),
         ],
       ),
