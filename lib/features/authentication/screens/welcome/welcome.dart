@@ -7,8 +7,12 @@ import 'package:flutter/material.dart';
 class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
+    var mediaQuery = MediaQuery.of(context);
+    var height = mediaQuery.size.height;
+    var brightness = mediaQuery.platformBrightness;
+    final isDark = brightness == Brightness.dark;
     return Scaffold(
+      backgroundColor: isDark? tSecondaryColor :  tPrimaryColor,
       body: Container(
         padding: EdgeInsets.all(tDefaultSize),
         child: Column(
@@ -21,10 +25,10 @@ class WelcomeScreen extends StatelessWidget {
             Column(
               children: [
                 Text(tWelcomeTitle,
-                    style: Theme.of(context).textTheme.headlineMedium),
+                    style: Theme.of(context).textTheme.headline3),
                 Text(
                   tWelcomeSubTitle,
-                  style: Theme.of(context).textTheme.bodyLarge,
+                  style: Theme.of(context).textTheme.headline2,
                   textAlign: TextAlign.center,
                 ),
               ],
@@ -34,14 +38,9 @@ class WelcomeScreen extends StatelessWidget {
                 Expanded(
                   child: OutlinedButton(
                     onPressed: () {},
-                    style: OutlinedButton.styleFrom(
-                      shape: RoundedRectangleBorder(),
-                      foregroundColor: tSecondaryColor,
-                      side: BorderSide(color: tSecondaryColor),
-                      padding: EdgeInsets.symmetric(vertical: tButtonHeight),
-                    ),
+
                     child: Text(tLogin.toUpperCase(),
-                        style: Theme.of(context).textTheme.bodyLarge),
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -50,17 +49,9 @@ class WelcomeScreen extends StatelessWidget {
                 Expanded(
                   child: ElevatedButton(
                     onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(),
-                      foregroundColor: tWhiteColor,
-                      backgroundColor: tSecondaryColor,
-                      side: BorderSide(color: tWhiteColor),
-                      padding: EdgeInsets.symmetric(vertical: tButtonHeight),
-                      textStyle: TextStyle(color: Colors.white),
-                    ),
+
                     child: Text(
                       tSignUp.toUpperCase(),
-                      style: Theme.of(context).textTheme.bodyLarge,
                     ),
                   ),
                 )
