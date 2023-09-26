@@ -3,15 +3,22 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:arrowj/features/authentication/screens/on_boarding_screen/on_boarding_screen.dart';
 
-class SplashScreenController extends GetxController {
-  static SplashScreenController get find => Get.find();
+class FadeInAnimationController extends GetxController {
+  static FadeInAnimationController get find => Get.find();
 
   RxBool animate = false.obs;
 
-  Future<void> startAnimation() async {
+  Future AnimationIn() async {
     await Future.delayed(Duration(milliseconds: 500));
     animate.value = true;
+    await Future.delayed(Duration(milliseconds: 3000));
+    animate.value = false;
     await Future.delayed(Duration(milliseconds: 2000));
     Get.offAll(() => OnBoardingScreen());
+  }
+
+  Future AnimationOut() async {
+    await Future.delayed(Duration(milliseconds: 500));
+    animate.value = true;
   }
 }
