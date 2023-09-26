@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:arrowj/features/authentication/screens/on_boarding_screen/on_boarding_screen.dart';
 
 class FadeInAnimationController extends GetxController {
-  static SplashScreenController get find => Get.find();
+  static FadeInAnimationController get find => Get.find();
 
   RxBool animate = false.obs;
 
