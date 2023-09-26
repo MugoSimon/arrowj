@@ -19,18 +19,7 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Obx(
-            () => AnimatedPositioned(
-              duration: const Duration(milliseconds: 1600),
-              top: splashScreenController.animate.value ? 0 : -30,
-              left: splashScreenController.animate.value ? 0 : -30,
-              child: Image(
-                image: AssetImage(tSplashTopIcon),
-                width: 120,
-                height: 120,
-              ),
-            ),
-          ),
+          TFadeInAnimation(splashScreenController: splashScreenController),
           Obx(
             () => AnimatedPositioned(
               duration: Duration(milliseconds: 1600),
@@ -88,3 +77,4 @@ class SplashScreen extends StatelessWidget {
     );
   }
 }
+

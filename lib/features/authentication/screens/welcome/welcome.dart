@@ -18,9 +18,12 @@ class WelcomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Image(
-              image: AssetImage(tWelcomeScreenImage),
-              height: height * 0.6,
+            Hero(
+              tag: 'welcome-image-tag',
+              child: Image(
+                image: AssetImage(tWelcomeScreenImage),
+                height: height * 0.6,
+              ),
             ),
             Column(
               children: [
