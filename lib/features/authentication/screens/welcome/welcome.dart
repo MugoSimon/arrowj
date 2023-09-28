@@ -2,11 +2,11 @@ import 'package:arrowj/constants/colors.dart';
 import 'package:arrowj/constants/image_strings.dart';
 import 'package:arrowj/constants/sizes.dart';
 import 'package:arrowj/constants/text_strings.dart';
+import 'package:arrowj/features/authentication/screens/login/login.dart';
 import 'package:arrowj/features/others/fade_in_animation/animated_design.dart';
 import 'package:arrowj/features/others/fade_in_animation/fade_in_animation_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 import '../../../others/fade_in_animation/fade_in_animation_controller.dart';
 
@@ -21,10 +21,8 @@ class WelcomeScreen extends StatelessWidget {
     var brightness = mediaQuery.platformBrightness;
     final isDark = brightness == Brightness.dark;
 
-
-
     return Scaffold(
-      backgroundColor: isDark? tSecondaryColor :  tPrimaryColor,
+      backgroundColor: isDark ? tSecondaryColor : tPrimaryColor,
       body: Stack(
         children: [
           TFadeInAnimation(
@@ -42,19 +40,22 @@ class WelcomeScreen extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.all(tDefaultSize),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Hero(
                     tag: 'welcome-image-tag',
-                    child: Image(
-                      image: AssetImage(tWelcomeScreenImage),
-                      height: height * 0.6,
+                    child: Container(
+                      height: 260,
+                      child: Image(
+                        image: AssetImage(tWelcomeScreenImage),
+                      ),
                     ),
                   ),
+                  SizedBox(height: 12.0),
                   Column(
                     children: [
                       Text(tWelcomeTitle,
                           style: Theme.of(context).textTheme.headline3),
+                      SizedBox(height: 10.0),
                       Text(
                         tWelcomeSubTitle,
                         style: Theme.of(context).textTheme.headline2,
@@ -62,30 +63,32 @@ class WelcomeScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: OutlinedButton(
-                          onPressed: () {},
-
-                          child: Text(tLogin.toUpperCase(),
+                  Spacer(),
+                  Container(
+                    height: 50.0,
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: OutlinedButton(
+                            onPressed: () => Get.to(() => const LoginScreen()),
+                            child: Text(
+                              tLogin.toUpperCase(),
+                            ),
                           ),
                         ),
-                      ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Expanded(
-                        child: ElevatedButton(
-                          onPressed: () {},
-
-                          child: Text(
-                            tSignUp.toUpperCase(),
+                        SizedBox(width: 10.0),
+                        Expanded(
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            child: Text(
+                              tSignUp.toUpperCase(),
+                            ),
                           ),
-                        ),
-                      )
-                    ],
-                  )
+                        )
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 10.0),
                 ],
               ),
             ),

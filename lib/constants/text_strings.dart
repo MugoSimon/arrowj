@@ -27,3 +27,14 @@ const String tOnBoardingCounter4 = "4/4";
 /* -- Welcome Screen  --*/
 const String tWelcomeTitle = "Building Power Apps";
 const String tWelcomeSubTitle = "Learn and code flutter to the best of your anime and time...\ndo enjoy....";
+
+/* -- Login Screen Text  --*/
+const String tLoginTitle = "Welcome Back, ";
+const String tLoginSubTitle = "Make it right, Make it work, Make it fast... ";
+const String tRememberMe = "RememberMe?";
+const String tForgotPassword = "Forgot Password?";
+const String tSignInWithGoogle = "Sign-in With Google";
+const String tAlreadyHaveAnAccount = "Already have an Account? ";
+const String tEmail = "E-mail";
+const String tPassword = "Password";
+

@@ -11,3 +11,6 @@ const String tOnBoardingImage4 = "assets/on_boarding_images/larry_resting.png";
 
 /* ---App Image String --- */
 const String tWelcomeScreenImage = "assets/images/welcome_images/larry_sitted_half.png";
+
+/* ---Googlw logo --- */
+const String tGoogleLogoImage = "assets/images/logo/google.png";

@@ -28,7 +28,9 @@ class SplashScreen extends StatelessWidget {
               leftBeforeValue: -30,
               leftAfterValue: 0,
             ),
-            child: const Image(image: AssetImage(tSplashTopIcon)),
+            child: const Image(image: AssetImage(tSplashTopIcon),
+              width: 120,
+              height: 120,),
           ),
           TFadeInAnimation(
             durationInMs: 2000,
@@ -58,7 +60,8 @@ class SplashScreen extends StatelessWidget {
               bottomBeforeValue: 0,
               bottomAfterValue: 100,
             ),
-            child: const Image(image: AssetImage(tSplashTopImage)),
+            child: const Image(image: AssetImage(tSplashTopImage),
+            ),
           ),
           TFadeInAnimation(
             durationInMs: 2400,
