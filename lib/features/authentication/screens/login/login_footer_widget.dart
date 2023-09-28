@@ -1,5 +1,3 @@
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../constants/image_strings.dart';
@@ -17,7 +15,9 @@ class login_footer_widget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const Text('OR'),
-        SizedBox(height: tFormHeight - 10.0,),
+        SizedBox(
+          height: tFormHeight - 10.0,
+        ),
         SizedBox(
           width: double.infinity,
           child: OutlinedButton.icon(
@@ -36,9 +36,7 @@ class login_footer_widget extends StatelessWidget {
                 text: tAlreadyHaveAnAccount,
                 style: Theme.of(context).textTheme.headline4,
                 children: const [
-                  TextSpan(
-                      text: tSignUp,
-                      style: TextStyle(color: Colors.blue)),
+                  TextSpan(text: tSignUp, style: TextStyle(color: Colors.blue)),
                 ]),
           ),
         ),

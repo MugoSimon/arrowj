@@ -1,6 +1,4 @@
-import 'package:arrowj/constants/image_strings.dart';
 import 'package:arrowj/constants/sizes.dart';
-import 'package:arrowj/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 
 import 'login_footer_widget.dart';

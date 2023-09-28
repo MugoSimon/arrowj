@@ -27,7 +27,7 @@ class LoginForm extends StatelessWidget {
             height: tFormHeight - 10.0,
           ),
           TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 prefixIcon: Icon(Icons.fingerprint),
                 labelText: tPassword,
                 hintText: tPassword,
