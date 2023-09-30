@@ -38,3 +38,7 @@ const String tAlreadyHaveAnAccount = "Already have an Account? ";
 const String tEmail = "E-mail";
 const String tPassword = "Password";
 
+/* -- Sign Up Screen Text  --*/
+const String tSignUpTitle = "Get On Board! ";
+const String tSignUpSubTitle = "Start your journey by creating your profile ";
+
