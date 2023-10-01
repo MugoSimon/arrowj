@@ -6,6 +6,10 @@ const String tAppTagLine = "Learning Flutter. \nQuite the Experience";
 /* -- Generic Strings  --*/
 const String tLogin = "Login";
 const String tSignUp = "Sign Up";
+const String tFullName = "Full Name";
+const String tEmail = "Email";
+const String tPhone = "Phone Number";
+const String tPassword = "Password";
 
 /* -- OnBoarding Text -- */
 //Title
@@ -35,10 +39,17 @@ const String tRememberMe = "RememberMe?";
 const String tForgotPassword = "Forgot Password?";
 const String tSignInWithGoogle = "Sign-in With Google";
 const String tAlreadyHaveAnAccount = "Already have an Account? ";
-const String tEmail = "E-mail";
-const String tPassword = "Password";
 
 /* -- Sign Up Screen Text  --*/
 const String tSignUpTitle = "Get On Board! ";
 const String tSignUpSubTitle = "Start your journey by creating your profile ";
 
+/* -- Forgot Password Screen Text  --*/
+const String tForgotPasswordTitle = "Do Choose ";
+const String tForgotPasswordSubTitle = "Select one of the given options below to reset your password. ";
+const String tResetViaEmail = "Reset via E-mail verification.";
+const String tResetViaPhone = "Reset via Phone verification.";
+
+/*  Reset via */
+const String tForgotPhoneSubTitle = " Enter your registered phone number to receive OTP.";
+const String tForgotMailSubTitle = " Enter your registered E-mail to receive OTP. ";

@@ -20,7 +20,7 @@ class FormHeaderWidget extends StatelessWidget {
           tag: 'welcome-image-tag',
           child: Image(
             image: AssetImage(image),
-            //height: size.height * 0.2,
+            height: size.height * 0.3,
           ),
         ),
         Text(title, style: Theme.of(context).textTheme.headline1),

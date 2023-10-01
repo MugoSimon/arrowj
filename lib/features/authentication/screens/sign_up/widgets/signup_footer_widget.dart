@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../../../../constants/image_strings.dart';
-import '../../../../constants/sizes.dart';
-import '../../../../constants/text_strings.dart';
+import '../../../../../constants/image_strings.dart';
+import '../../../../../constants/sizes.dart';
+import '../../../../../constants/text_strings.dart';
 
-class LoginFooterWidget extends StatelessWidget {
-  const LoginFooterWidget({
+class SignupFooter_widget extends StatelessWidget {
+  const SignupFooter_widget({
     super.key,
   });
 
@@ -36,7 +36,7 @@ class LoginFooterWidget extends StatelessWidget {
                 text: tAlreadyHaveAnAccount,
                 style: Theme.of(context).textTheme.headline4,
                 children: const [
-                  TextSpan(text: tSignUp, style: TextStyle(color: Colors.blue)),
+                  TextSpan(text: tLogin, style: TextStyle(color: Colors.blue)),
                 ]),
           ),
         ),

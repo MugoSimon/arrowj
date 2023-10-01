@@ -45,7 +45,7 @@ class WelcomeScreen extends StatelessWidget {
                   Hero(
                     tag: 'welcome-image-tag',
                     child: SizedBox(
-                      height: 260,
+                      //height: 260,
                       child: Image(
                         image: AssetImage(tWelcomeScreenImage),
                       ),
@@ -66,7 +66,7 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   Spacer(),
                   Container(
-                    height: 50.0,
+                    height: 60.0,
                     child: Row(
                       children: [
                         Expanded(
@@ -77,7 +77,7 @@ class WelcomeScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(width: 10.0),
+                        SizedBox(width: 7.0),
                         Expanded(
                           child: ElevatedButton(
                             onPressed: () => Get.to(() => const SignUpScreen()),

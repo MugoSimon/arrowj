@@ -12,18 +12,18 @@ class LoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
         child: Container(
-      padding: EdgeInsets.symmetric(vertical: tFormHeight - 10.0),
+      padding: const EdgeInsets.symmetric(vertical: tFormHeight - 10.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 prefixIcon: Icon(Icons.person_outline_outlined),
                 labelText: tEmail,
                 hintText: tEmail,
                 border: OutlineInputBorder()),
           ),
-          SizedBox(
+          const SizedBox(
             height: tFormHeight - 10.0,
           ),
           TextFormField(
@@ -37,10 +37,10 @@ class LoginForm extends StatelessWidget {
                   icon: Icon(Icons.remove_red_eye_sharp),
                 )),
           ),
-          SizedBox(
+          const SizedBox(
             height: tFormHeight - 10.0,
           ),
-          Align(
+          const Align(
             alignment: Alignment.centerRight,
             child: TextButton(onPressed: null, child: Text(tForgotPassword)),
           ),
