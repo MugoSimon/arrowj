@@ -9,8 +9,11 @@ const String tOnBoardingImage2 = "assets/on_boarding_images/larry_chat_sit.png";
 const String tOnBoardingImage3 = "assets/on_boarding_images/larry_image_icon.png";
 const String tOnBoardingImage4 = "assets/on_boarding_images/larry_resting.png";
 
-/* ---App Image String --- */
+/* --- App Image String --- */
 const String tWelcomeScreenImage = "assets/images/welcome_images/larry_sitted_half.png";
 
-/* ---Googlw logo --- */
+/* --- Google logo --- */
 const String tGoogleLogoImage = "assets/images/logo/google.png";
+
+/* --- forgot password --- */
+const String tForgotPasswordImage = "assets/images/forgot_password/forgot_password.png";

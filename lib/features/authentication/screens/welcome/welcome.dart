@@ -3,6 +3,7 @@ import 'package:arrowj/constants/image_strings.dart';
 import 'package:arrowj/constants/sizes.dart';
 import 'package:arrowj/constants/text_strings.dart';
 import 'package:arrowj/features/authentication/screens/login/login.dart';
+import 'package:arrowj/features/authentication/screens/sign_up/signup_screen.dart';
 import 'package:arrowj/features/others/fade_in_animation/animated_design.dart';
 import 'package:arrowj/features/others/fade_in_animation/fade_in_animation_model.dart';
 import 'package:flutter/material.dart';
@@ -43,8 +44,8 @@ class WelcomeScreen extends StatelessWidget {
                 children: <Widget>[
                   Hero(
                     tag: 'welcome-image-tag',
-                    child: Container(
-                      height: 260,
+                    child: SizedBox(
+                      //height: 260,
                       child: Image(
                         image: AssetImage(tWelcomeScreenImage),
                       ),
@@ -65,7 +66,7 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   Spacer(),
                   Container(
-                    height: 50.0,
+                    height: 60.0,
                     child: Row(
                       children: [
                         Expanded(
@@ -76,10 +77,10 @@ class WelcomeScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(width: 10.0),
+                        SizedBox(width: 7.0),
                         Expanded(
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () => Get.to(() => const SignUpScreen()),
                             child: Text(
                               tSignUp.toUpperCase(),
                             ),

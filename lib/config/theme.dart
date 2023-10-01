@@ -1,4 +1,5 @@
 import 'package:arrowj/config/outlined_button_theme.dart';
+import 'package:arrowj/config/text_field_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:arrowj/config/text_theme.dart';
 
@@ -20,6 +21,7 @@ class TAppTheme {
     ),*/
     outlinedButtonTheme: TOutlinedButtonTheme.lightOutlineButtonTheme,
     elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
+    inputDecorationTheme: TThemeFormFieldTheme.lightInputDecorationTheme,
   );
 
   static ThemeData darkTheme = ThemeData.dark().copyWith(
@@ -35,6 +37,7 @@ class TAppTheme {
     ),*/
       outlinedButtonTheme: TOutlinedButtonTheme.darkOutlineButtonTheme,
     elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
+    inputDecorationTheme: TThemeFormFieldTheme.darkInputDecorationTheme,
   );
 
   TAppTheme._();
