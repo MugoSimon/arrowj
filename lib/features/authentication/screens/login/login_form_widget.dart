@@ -1,7 +1,9 @@
+import 'package:arrowj/features/authentication/screens/forgot_password/forgot_password_options/forgot_password_model_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../constants/sizes.dart';
 import '../../../../constants/text_strings.dart';
+import '../forgot_password/forgot_password_options/forgot_password_btn_widget.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({
@@ -40,9 +42,13 @@ class LoginForm extends StatelessWidget {
           const SizedBox(
             height: tFormHeight - 10.0,
           ),
-          const Align(
+          Align(
             alignment: Alignment.centerRight,
-            child: TextButton(onPressed: null, child: Text(tForgotPassword)),
+            child: TextButton(
+                onPressed: () {
+                  ForgotPasswordScreen.buildShowModalBottomSheet(context);
+                },
+                child: const Text(tForgotPassword)),
           ),
           SizedBox(
             width: double.infinity,
@@ -53,4 +59,5 @@ class LoginForm extends StatelessWidget {
       ),
     ));
   }
+
 }
