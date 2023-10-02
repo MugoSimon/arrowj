@@ -10,6 +10,8 @@ const String tFullName = "Full Name";
 const String tEmail = "Email";
 const String tPhone = "Phone Number";
 const String tPassword = "Password";
+const String tNext = " Next ";
+
 
 /* -- OnBoarding Text -- */
 //Title
@@ -53,3 +55,8 @@ const String tResetViaPhone = "Reset via Phone verification.";
 /*  Reset via */
 const String tForgotPhoneSubTitle = " Enter your registered phone number to receive OTP.";
 const String tForgotMailSubTitle = " Enter your registered E-mail to receive OTP. ";
+
+/* OTP SCREEN */
+const String tVerification = " Verification ";
+const String tVerificationSubTitle = " Enter the verification code sent at support@mugocoding.com";
+const String tOTPTitle = "CO\nDE";

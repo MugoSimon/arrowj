@@ -6,15 +6,25 @@ class FormHeaderWidget extends StatelessWidget {
     required this.image,
     required this.title,
     required this.subTitle,
+    this.imageHeight = 0.2,
+    this.imageColor,
+    this.heightBetween,
+    this.crossAxisAlignment = CrossAxisAlignment.start,
+    this.textAlign,
   }) : super(key: key);
 
   final String image, title, subTitle;
+  final double? imageHeight;
+  final Color? imageColor;
+  final double? heightBetween;
+  final TextAlign? textAlign;
+  final CrossAxisAlignment crossAxisAlignment;
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: crossAxisAlignment,
       children: [
         Hero(
           tag: 'welcome-image-tag',
@@ -24,9 +34,7 @@ class FormHeaderWidget extends StatelessWidget {
           ),
         ),
         Text(title, style: Theme.of(context).textTheme.headline1),
-        Text(
-          subTitle,
-          style: Theme.of(context).textTheme.headlineMedium,
+        Text(subTitle,textAlign: textAlign, style: Theme.of(context).textTheme.headlineMedium,
         ),
       ],
     );

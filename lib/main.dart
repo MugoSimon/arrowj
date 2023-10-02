@@ -18,6 +18,9 @@ class App extends StatelessWidget {
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
       themeMode: ThemeMode.system,
+      debugShowCheckedModeBanner: false,
+      defaultTransition: Transition.leftToRight,
+      transitionDuration: const Duration(milliseconds: 500),
       initialRoute: '/',
       getPages: [
         GetPage(name: '/', page: () => SplashScreen()),

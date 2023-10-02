@@ -16,13 +16,14 @@ class LoginHeaderWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Hero(
+        const Hero(
           tag: 'welcome-image-tag',
           child: Image(
             image: AssetImage(tWelcomeScreenImage),
           ),
         ),
-        Text(tLoginTitle, style: Theme.of(context).textTheme.headline1),
+        Text(tLoginTitle,
+            style: Theme.of(context).textTheme.headline1),
         Text(
           tLoginSubTitle,
           style: Theme.of(context).textTheme.headlineMedium,
